@@ -139,15 +139,23 @@
     \frametitle{Oplossingen?}
 
     \begin{itemize}
-      \item Apple iOS 8 gebruikt willekeurige MAC addressen voor Probe Requests
-        \begin{itemize}
-          \item MAAR niet altijd
-          \item zie http://blog.airtightnetworks.com/ios8-mac-randomgate/
-        \end{itemize}
       \item Stop gewoon met Probe Requests te sturen
         \begin{itemize}
           \item Geen verborgen netwerken meer
           \item verborgen netwerken helpen toch niets
+        \end{itemize}
+        \item
+            wpa\_supplicant: scan\_ssid \\
+            SSID scan technique; 0 (default) or 1.  Technique 0 scans for the
+            SSID using a broadcast Probe Request frame while 1 uses a
+            directed Probe Request frame.  Access points that cloak themselves
+            by not broadcasting their SSID require technique 1, but beware that
+            this scheme can cause scanning to take longer to complete.
+        \pause
+      \item Apple iOS 8 gebruikt willekeurige MAC addressen voor Probe Requests
+        \begin{itemize}
+          \item MAAR niet altijd
+          \item zie http://blog.airtightnetworks.com/ios8-mac-randomgate/
         \end{itemize}
     \end{itemize}
   \end{frame}
